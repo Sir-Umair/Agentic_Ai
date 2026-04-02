@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Doc Processor | AI extraction</title>
+    <link rel="stylesheet" href="/static/style.css?v=1.2">
+
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <div class="grid-bg"></div>
+
+    <div class="container">
+        <header>
+            <h1>Student <span class="gradient-text">Doc Processor</span></h1>
+            <p>AI-powered student data extraction and record management.</p>
+        </header>
+
+        <main class="grid">
+            <section class="premium-card upload-section">
+                <div class="card-header">
+                    <i data-lucide="upload-cloud"></i>
+                    <h2>Upload Document</h2>
+                </div>
+
+                <div class="drop-zone" id="dropZone">
+                    <input type="file" id="fileInput" accept=".pdf,image/*">
+                    <div class="drop-zone-text" id="dropZoneText">
+                        Click or drag  document here
+                    </div>
+                </div>
+
+                <button id="processBtn" disabled>
+                    <span>Start Analysis</span>
+                    <i data-lucide="chevron-right"></i>
+                </button>
+            </section>
+
+            <section class="premium-card results-section">
+                <div class="card-header">
+                    <i data-lucide="clipboard-list"></i>
+                    <h2>Analysis Results</h2>
+                </div>
+
+                <div class="scroll-area">
+                    <div id="emptyState" class="empty-state">
+                        <i data-lucide="cpu"></i>
+                        <p>Waiting for document upload...</p>
+                    </div>
+
+                    <div id="resultsContent" class="results-content hidden">
+                        <div class="result-grid">
+                            <div class="result-item">
+                                <label>Student Name</label>
+                                <span id="resName">-</span>
+                            </div>
+                            <div class="result-item">
+                                <label>Roll Number</label>
+                                <span id="resRoll">-</span>
+                            </div>
+                            <div class="result-item">
+                                <label>Page Count</label>
+                                <span id="resPages">-</span>
+                            </div>
+                            <div class="result-item highlight">
+                                <label>Calculated Marks</label>
+                                <span id="resMarks">-</span>
+                            </div>
+                        </div>
+
+                        <div class="sync-banner" id="syncBanner">
+                            <div id="syncIcon">
+                                <i data-lucide="activity"></i>
+                            </div>
+                            <div>
+                                <h4>System Status</h4>
+                                <p id="resStatus">Ready</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="loadingState" class="loading-state hidden">
+                        <div class="spinner"></div>
+                        <p>Processing...</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2026 Student Doc Processor
+Engineered by Muhammad Umair, empowering educational institutions with seamless, AI-driven record automation for unmatched excellence.</p>
+        </footer>
+    </div>
+
+
+    <script src="/static/script.js?v=1.2"></script>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

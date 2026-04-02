@@ -1,0 +1,30 @@
+<<<<<<< HEAD
+# Flask & CORS
+flask
+flask-cors
+
+# LangChain core & components
+langchain
+langchain-core
+langchain-community
+langchain-anthropic
+langchain-huggingface
+langchain-text-splitters
+
+# Vector Stores
+faiss-cpu
+
+# Document loaders
+pdfminer.six
+
+# Other
+python-dotenv
+sentence-transformers
+=======
+fastapi
+uvicorn
+google-generativeai>=0.8.0
+PyPDF2
+python-multipart
+requests
+>>>>>>> 97e9061f06c482a2eb03840ba059ca50cff1240b

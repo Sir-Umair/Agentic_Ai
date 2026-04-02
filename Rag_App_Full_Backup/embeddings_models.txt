@@ -1,0 +1,3 @@
+Listing embedding models...
+Model: models/gemini-embedding-001
+Model: models/gemini-embedding-2-preview
